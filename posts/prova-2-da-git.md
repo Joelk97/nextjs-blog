@@ -1,5 +1,5 @@
 ---
-title: 'Prova da git'
+title: Prova da git
 date: '2022-10-09'
 ---
 
