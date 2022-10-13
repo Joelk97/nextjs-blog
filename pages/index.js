@@ -11,7 +11,6 @@ export default function Home({ allPostsData }) {
     <Layout home>
       <Head>
         <title>{siteTitle}</title>
-        <Script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></Script>
       </Head>
       <section className={utilStyles.headingMd}>
         <p>[Your Self Introduction]</p>
@@ -36,18 +35,6 @@ export default function Home({ allPostsData }) {
           ))}
         </ul>
       </section>
-      <Script onLoad={() => {
-         if (window.netlifyIdentity) {
-          window.netlifyIdentity.on("init", user => {
-            if (!user) {
-              window.netlifyIdentity.on("login", () => {
-                document.location.href = "/admin/";
-              });
-            }
-          });
-        }
-      }}>
-      </Script>
     </Layout>
   )
 }
